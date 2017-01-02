@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<form method="POST" action= "/save">
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="text" name="age" class="form-control" id="age" >
+  </div>
+  <div class="form-group">
+    <label for="famille">Famille</label>
+    <input type="text" name = "famille" class="form-control" id="famille" >
+  </div>
+   <div class="form-group">
+    <label for="nourriture">Nourriture</label>
+    <input type="text" class="form-control" name= "nourriture" id="nourriture" >
+  </div>
+   <div class="form-group">
+    <label for="race">Race</label>
+    <input type="text" class="form-control" name= "race" id="race" >
+  </div>
+
+  <button type="submit" class="btn btn-default">Ajouter</button>
+</form>
+{% endblock  body%}

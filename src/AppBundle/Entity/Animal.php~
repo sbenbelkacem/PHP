@@ -1,0 +1,39 @@
+<?php 
+
+// src/AppBundle/Entity/Product.php
+namespace AppBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="animal")
+ */
+class Animal
+{
+    /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="decimal", scale=3)
+     */
+    private $age;
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $famille;
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $race;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $nourriture ; 
+
+    
+}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h3>Enclos</h3>
+<table class="table table-striped">
+<thead>
+  <tr>
+    <td>#</td>
+    <td>Age</td>
+    <td>Famille</td>
+    <td>Nourriture</td>
+    <td>Race</td>
+    <td>modifier</td>
+  </tr>
+</thead>
+
+{% for animal in animals %}
+<tr>
+    <td>#</td>
+    <td>{{ animal.age }}</td>
+    <td>{{ animal.famille }}</td>
+    <td>{{ animal.nourriture }}</td>
+    <td>{{ animal.race }}</td>
+    <td><a href= "/edit/{{animal.id}}">  <span class="glyphicon glyphicon-cog"></span> </a></td>
+</tr>
+{% endfor %}
+
+</table>
+{% endblock %}
